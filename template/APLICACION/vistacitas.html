@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+
+<body class="container mt-5">
+
+  <ul class="nav nav-tabs" role="tablist"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li class="nav-item" role="presentation">
+      <a class="btn btn-info  btn-md" href="../"> HOME 🏠 </a> &nbsp;&nbsp;&nbsp;&nbsp;
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="btn btn-info  btn-md" href="/citas"> CITAS 📅 </a> &nbsp;&nbsp;&nbsp;&nbsp;
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="btn btn-info  btn-md" href="/clientes"> CLIENTES 👤</a> &nbsp;&nbsp;&nbsp;&nbsp;
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="btn btn-info  btn-md" href="/medicos"> MASCOTAS 🐕</a> &nbsp;&nbsp;&nbsp;
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="btn btn-info  btn-md" href="/func"> FUNCIONARIOS 👨🏻‍⚕️</a> &nbsp;&nbsp;&nbsp;
+    </li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="alert alert-info display-1 text-center"> LISTADO DE CITAS </div>
+
+    {% if cita %}
+
+    <table class="table table-striped table-inverse table-responsive">
+        <thead class="thead-inverse">
+            <tr>
+                <th>ASUNTO</th>
+                <th>PACIENTE</th>
+                <th>MEDICO</th>
+                <th>FECHA (MM/DD/AAAA)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cit in cita %}
+
+            <tr>
+                <td> {{ cit.asunto  }}</td>
+                <td> {{ cit.paciente.nombre  }}</td>
+                <td> {{ cit.medico.nombre  }}</td>
+                <td aria-placeholder="MM/DD/AAAA"> {{ cit.fecha  }} </td>
+                <td><a class="btn btn-primary btn-sm" href="/editarcitas/{{ cit.id }}"  role="button"> Actualizar📝 </a></td>
+                <td><a class="btn btn-primary btn-sm" href="/eliminarcitas/{{ cit.id }}"  role="button"> Eliminar ❌ </a></td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+
+    <div class="alert alert-primary" role="alert">
+        <strong> NO SE ENCONTRARON CITAS MEDICAS </strong>
+    </div>
+
+    {% endif %}
+
+    <a href="../" class="btn btn-danger"> VOLVER </a>
+    <a href="../addcitas" class="btn btn-info float-end"> AGREGAR CITA </a>
+
+
+
+
+    
+</body>
+</html>
