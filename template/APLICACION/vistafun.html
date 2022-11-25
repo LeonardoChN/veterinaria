@@ -44,7 +44,7 @@
 
     <div class="alert alert-info display-1 text-center"> LISTADO DE MEDICOS </div>
 
-    {% if medicos %}
+    {% if funcionario %}
 
     <table class="table table-striped table-inverse table-responsive">
         <thead class="thead-inverse">
@@ -55,11 +55,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for medic in medicos %}
+            {% for fun in funcionario %}
             <tr>
-                <td> {{ medic.rut  }}</td>
-                <td> {{ medic.nombre  }}</td>
-                <td> {{ medic.especialidad  }}</td>
+                <td> {{ fun.rut_f  }}</td>
+                <td> {{ fun.nombre_fun  }}</td>
+                <td> {{ fun.especialidad  }}</td>
                 <td><a class="btn btn-primary btn-sm" href="/editarmedicos/{{ medic.id }}"  role="button"> Actualizar📝 </a></td>
                 <td><a class="btn btn-primary btn-sm" href="/eliminarmedicos/{{ medic.id }}"  role="button"> Eliminar ❌ </a></td>
 

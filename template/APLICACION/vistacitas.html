@@ -58,9 +58,9 @@
             {% for cit in cita %}
 
             <tr>
-                <td> {{ cit.asunto  }}</td>
-                <td> {{ cit.paciente.nombre  }}</td>
-                <td> {{ cit.medico.nombre  }}</td>
+                <td> {{ cit.fecha  }}</td>
+                <td> {{ cit.cliente_id   }}</td>
+                <td> {{ cit.funcionario_id  }}</td>
                 <td aria-placeholder="MM/DD/AAAA"> {{ cit.fecha  }} </td>
                 <td><a class="btn btn-primary btn-sm" href="/editarcitas/{{ cit.id }}"  role="button"> Actualizar📝 </a></td>
                 <td><a class="btn btn-primary btn-sm" href="/eliminarcitas/{{ cit.id }}"  role="button"> Eliminar ❌ </a></td>
