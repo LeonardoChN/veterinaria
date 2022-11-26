@@ -54,7 +54,7 @@
                 <td> {{ cit.tipoat_id  }}</td>
 
 
-
+                <!-- COLOCAR EL ID QUE SE ENCUENTRA EN LA TABLA DE CITAS DE LA BASE DE DATOS  -->
                 <td><a class="btn btn-primary btn-sm" href="/editarcitas/{{ cit.id }}"  role="button"> Actualizar📝 </a></td>
                 <td><a class="btn btn-primary btn-sm" href="/eliminarcitas/{{ cit.id }}"  role="button"> Eliminar ❌ </a></td>
 
@@ -66,7 +66,7 @@
     {% else %}
 
     <div class="alert alert-primary" role="alert">
-        <strong> NO SE ENCONTRARON CITAS MEDICAS </strong>
+        <strong> NO SE ENCONTRARON CITAS </strong>
     </div>
 
     {% endif %}

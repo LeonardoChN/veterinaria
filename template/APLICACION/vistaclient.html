@@ -28,7 +28,7 @@
 
 <!--  ---------------- CODIGO ---------------- -->
 
-    <div class="alert alert-info display-1 text-center"> LISTADO DE PACIENTES </div>
+    <div class="alert alert-info display-1 text-center"> LISTADO DE CLIENTES </div>
 
     {% if clientes %}
     
@@ -54,7 +54,7 @@
 
 
 
-
+                <!-- COLOCAR EL ID QUE SE ENCUENTRA EN LA TABLA DE CLIENTES DE LA BASE DE DATOS  -->
                 <td><a class="btn btn-primary btn-sm" href="/editarpacientes/{{ pac.id }}"  role="button"> Actualizar📝 </a></td>
                 <td><a class="btn btn-primary btn-sm" href="/eliminarpacientes/{{ pac.id }}"  role="button"> Eliminar ❌ </a></td>
 
@@ -66,14 +66,14 @@
     {% else %}
 
     <div class="alert alert-primary" role="alert">
-        <strong> No se encontro ningun paciente </strong>
+        <strong> No se encontro ningun cliente </strong>
     </div>
 
     {% endif %}
 
 <!-- rutas de los URL -->
     <a href="../" class="btn btn-danger"> VOLVER </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="../addpacientes" class="btn btn-info float-mid"> AGREGAR PACIENTE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="../addpacientes" class="btn btn-info float-mid"> AGREGAR CLIENTE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="../addmasc" class="btn btn-info float-mid"> AGREGAR MASCOTA</a>
     
 </body>

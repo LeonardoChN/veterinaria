@@ -29,7 +29,7 @@
 
 <!--  ---------------- CODIGO ---------------- -->
 
-    <div class="alert alert-info display-1 text-center"> LISTADO DE MEDICOS </div>
+    <div class="alert alert-info display-1 text-center"> LISTADO DE FUNCIONARIOS </div>
 
     {% if funcionario %}
 
@@ -47,8 +47,10 @@
                 <td> {{ fun.rut_f  }}</td>
                 <td> {{ fun.nombre_fun  }}</td>
                 <td> {{ fun.especialidad  }}</td>
-                <td><a class="btn btn-primary btn-sm" href="/editarmedicos/{{ medic.id }}"  role="button"> Actualizar📝 </a></td>
-                <td><a class="btn btn-primary btn-sm" href="/eliminarmedicos/{{ medic.id }}"  role="button"> Eliminar ❌ </a></td>
+
+                <!-- COLOCAR EL ID QUE SE ENCUENTRA EN LA TABLA DE FUNCIONARIOS DE LA BASE DE DATOS  -->
+                <td><a class="btn btn-primary btn-sm" href="/editarmedicos/{{ fun.id }}"  role="button"> Actualizar📝 </a></td>
+                <td><a class="btn btn-primary btn-sm" href="/eliminarmedicos/{{ fun.id }}"  role="button"> Eliminar ❌ </a></td>
 
             </tr>
             {% endfor %}
@@ -58,14 +60,14 @@
     {% else %}
 
     <div class="alert alert-primary" role="alert">
-        <strong> No se encontro medico en le sistema </strong>
+        <strong> No se encontro ningun funcionario en le sistema </strong>
     </div>
 
     {% endif %}
 
 <!-- rutas de los URL -->
     <a href="../" class="btn btn-danger"> VOLVER </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    <a href="../addmedicos" class="btn btn-info float-mid"> AGREGAR MEDICO</a>
+    <a href="../addmedicos" class="btn btn-info float-mid"> AGREGAR FUNCIONARIO</a>
 
 
 
