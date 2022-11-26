@@ -22,21 +22,11 @@
       <a class="btn btn-info  btn-md" href="/clientes"> CLIENTES 👤</a> &nbsp;&nbsp;&nbsp;&nbsp;
     </li>
     <li class="nav-item" role="presentation">
-      <a class="btn btn-info  btn-md" href="/medicos"> MASCOTAS 🐕</a> &nbsp;&nbsp;&nbsp;
-    </li>
-    <li class="nav-item" role="presentation">
       <a class="btn btn-info  btn-md" href="/func"> FUNCIONARIOS 👨🏻‍⚕️</a> &nbsp;&nbsp;&nbsp;
     </li>
   </ul>
 
-
-
-
-
-
-
-
-
+<!--  ---------------- CODIGO ---------------- -->
 
     <div class=" alert alert-info display-1 text-center"> LISTADO DE PACIENTES </div>
 
@@ -44,11 +34,11 @@
         {{ form.as_p }}
         {% csrf_token %}
 
-        <input type="submit" value="AGREGAR PACIENTE" class="btn btn-info">
+        <input type="submit" value="AGREGAR CLIENTES" class="btn btn-info">
     </form>
 
 <br><br>
-     <a class="btn btn-info" href="../pacientes"> VOLVER A PACIENTES </a>
+     <a class="btn btn-info" href="../clientes"> VOLVER A CLIENTES </a>
     
 </body>
 </html>

@@ -27,9 +27,9 @@ urlpatterns = [
     
 
     path('addmedicos/',views.agregarfun),
-        path('addcitas/',views.agregarcitas),
+    path('addcitas/',views.agregarcitas),
     path('addpacientes/',views.agregarcliente),
-
+    path('addmasc/',views.agregarmascota),
 
 
 

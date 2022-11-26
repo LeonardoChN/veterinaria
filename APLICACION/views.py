@@ -55,7 +55,7 @@ def agregarcitas(request):
 
 
 
-## VISTA PACIENTES
+## VISTA CLIENTES
 def listarcliente(request):
     cliente = clientes.objects.all()
     data = {'clientes': cliente}

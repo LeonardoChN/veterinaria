@@ -22,34 +22,26 @@
       <a class="btn btn-info  btn-md" href="/clientes"> CLIENTES 👤</a> &nbsp;&nbsp;&nbsp;&nbsp;
     </li>
     <li class="nav-item" role="presentation">
-      <a class="btn btn-info  btn-md" href="/medicos"> MASCOTAS 🐕</a> &nbsp;&nbsp;&nbsp;
-    </li>
-    <li class="nav-item" role="presentation">
       <a class="btn btn-info  btn-md" href="/func"> FUNCIONARIOS 👨🏻‍⚕️</a> &nbsp;&nbsp;&nbsp;
     </li>
   </ul>
 
 
+<!--  ---------------- CODIGO ---------------- -->
 
 
 
-
-
-
-
-
-
-    <div class=" alert alert-info display-1 text-center"> LISTADO DE MEDICOS </div>
+    <div class=" alert alert-info display-1 text-center"> LISTADO DE FUNCIONARIOS </div>
 
     <form method = 'post'>
         {{ form.as_p }}
         {% csrf_token %}
 
-        <input type="submit" value="AGREGAR MEDICO" class="btn btn-info">
+        <input type="submit" value="AGREGAR FUNCIONARIO" class="btn btn-info">
     </form>
 
 <br>
-     <a class="btn btn-info" href="../medicos"> VOLVER A MEDICOS </a>
+     <a class="btn btn-info" href="../func"> VOLVER A FUNCIONARIOS </a>
     
 </body>
 </html>
