@@ -26,6 +26,7 @@ urlpatterns = [
     path('clientes/',views.listarcliente),
     
 
+    
     path('addmedicos/',views.agregarfun),
     path('addcitas/',views.agregarcitas),
     path('addpacientes/',views.agregarcliente),

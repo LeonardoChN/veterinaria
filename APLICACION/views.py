@@ -32,9 +32,6 @@ def agregarfun(request):
     return render(request, 'APLICACION/agregarfun.html', data)
 
 
-
-
-
 ## VISTA CITAS
 def listarcitas(request):
     citas = cita.objects.all()
@@ -50,9 +47,6 @@ def agregarcitas(request):
         return index(request)
     data = {'form': form}
     return render(request, 'APLICACION/agregarcitas.html', data)
-
-
-
 
 
 ## VISTA CLIENTES
@@ -76,7 +70,7 @@ def agregarcliente(request):
 def listarmascotas(request):
     masc = mascota.objects.all()
     data = {'mascota': masc}
-    return render(request, 'APLICACION/vistaclient.html', data)
+    return render(request, 'APLICACION/vistamasc.html', data)
 #
 def agregarmascota(request):
     form = formMasc()
@@ -86,7 +80,10 @@ def agregarmascota(request):
             form.save()
         return index(request)
     data = {'form': form}
-    return render(request, 'APLICACION/agregarclient.html', data)
+    return render(request, 'APLICACION/agregarmasc.html', data)
+
+
+
 
 
 
