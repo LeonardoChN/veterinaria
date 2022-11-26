@@ -54,7 +54,7 @@
                 <td> {{ cit.tipoat_id  }}</td>
 
 
-                <!-- COLOCAR EL ID QUE SE ENCUENTRA EN LA TABLA DE CITAS DE LA BASE DE DATOS  -->
+
                 <td><a class="btn btn-primary btn-sm" href="/editarcitas/{{ cit.id }}"  role="button"> Actualizar📝 </a></td>
                 <td><a class="btn btn-primary btn-sm" href="/eliminarcitas/{{ cit.id }}"  role="button"> Eliminar ❌ </a></td>
 
@@ -72,7 +72,9 @@
     {% endif %}
 
     <a href="../" class="btn btn-danger"> VOLVER </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="../addcitas" class="btn btn-info float-mid"> AGREGAR CITA </a>
+    <a href="../addcitas" class="btn btn-info float-mid"> AGREGAR CITA </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="../" class="btn btn-secondary float-mid"> AGREGAR TIPO DE CITAS </a>
+
 
 </body>
 </html>
