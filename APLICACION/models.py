@@ -47,7 +47,7 @@ class clientes (models.Model):
     fono = models.CharField(max_length=45)
     nom_mas = models.ForeignKey(mascota,on_delete=models.CASCADE)
     def __str__(self):
-        return self.nombre_cli, self.nom_mas 
+        return self.nombre_cli
 
 #esquema de la cita
 

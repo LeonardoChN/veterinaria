@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from APLICACION.forms import   formFunc,formMasc, formCliente,    formCita
+from APLICACION.forms import   formFunc,formMasc, formCliente,   formCita,  formRaza,formTipom,formTipoat
 
 from APLICACION.models import  funcionarios,mascota,clientes ,   cita
 
@@ -20,7 +20,7 @@ def listarfuncionario(request):
     fun = funcionarios.objects.all()
     data = {'funcionario': fun}
     return render(request, 'APLICACION/vistafun.html', data)
-#
+#AGREGAR
 def agregarfun(request):
     form = formFunc()
     if request.method == 'POST' : 
@@ -37,7 +37,7 @@ def listarcitas(request):
     citas = cita.objects.all()
     data = {'cita': citas}
     return render(request, 'APLICACION/vistacitas.html', data)
-#
+#AGREGAR
 def agregarcitas(request):
     form = formCita()
     if request.method == 'POST' : 
@@ -54,7 +54,7 @@ def listarcliente(request):
     cliente = clientes.objects.all()
     data = {'clientes': cliente}
     return render(request, 'APLICACION/vistaclient.html', data)
-#
+#AGREGAR
 def agregarcliente(request):
     form = formCliente()
     if request.method == 'POST' : 
@@ -71,7 +71,7 @@ def listarmascotas(request):
     masc = mascota.objects.all()
     data = {'mascota': masc}
     return render(request, 'APLICACION/vistamasc.html', data)
-#
+#AGREGAR
 def agregarmascota(request):
     form = formMasc()
     if request.method == 'POST' : 
@@ -84,9 +84,43 @@ def agregarmascota(request):
 
 
 
+#
+# ------- AGREGAR TIPO ATECION, TIPO MASCOTA Y RAZA --------
+#
+
+#TIPO ATECION
+def agregaratencion(request):
+    form = formTipoat()
+    if request.method == 'POST' : 
+        form = formTipoat(request.POST)
+        if form.is_valid(): 
+            form.save()
+        return index(request)
+    data = {'form': form}
+    return render(request, 'APLICACION/agregartipoaten.html', data)
 
 
+#TIPO MASCOTA
+def agregartipomascota(request):
+    form = formTipom()
+    if request.method == 'POST' : 
+        form = formTipom(request.POST)
+        if form.is_valid(): 
+            form.save()
+        return index(request)
+    data = {'form': form}
+    return render(request, 'APLICACION/agregartipomasc.html', data)
 
+#TIPO RAZA
+def agregarraza(request):
+    form = formRaza()
+    if request.method == 'POST' : 
+        form = formRaza(request.POST)
+        if form.is_valid(): 
+            form.save()
+        return index(request)
+    data = {'form': form}
+    return render(request, 'APLICACION/agregarraza.html', data)
 
 
 

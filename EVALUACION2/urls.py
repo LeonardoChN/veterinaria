@@ -32,6 +32,14 @@ urlpatterns = [
     path('addpacientes/',views.agregarcliente),
     path('addmasc/',views.agregarmascota),
 
+    path('addatencion/',views.agregaratencion),
+    
+    path('addtipo/',views.agregartipomascota),
+    path('addraza/',views.agregarraza),
+
+
+     
+
 
 
 
