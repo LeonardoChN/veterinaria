@@ -84,9 +84,9 @@ def agregarmascota(request):
 
 
 
-#
+#-----------------------------------------------------------
 # ------- AGREGAR TIPO ATECION, TIPO MASCOTA Y RAZA --------
-#
+#-----------------------------------------------------------
 
 #TIPO ATECION
 def agregaratencion(request):
@@ -128,65 +128,60 @@ def agregarraza(request):
 #---------  ELIMINAR Y ACTUALIZAR   ---------
 #--------------------------------------------
 
-'''
-    #PACIENTES
-def eliminarpaciente(request, id):
-    paciente = PACIENTE.objects.get(id= id)
-    paciente.delete()
-    return redirect('/pacientes')
 
-def actualzarpaciente (request, id) :
-    paciente = PACIENTE.objects.get(id= id)
-    form = formPaciente (instance=paciente)
+#CLIENTES
+def eliminarcliente(request, id):
+    cliente = clientes.objects.get(id= id)
+    cliente.delete()
+    return redirect('/clientes')
+
+def actualzarcliente (request, id) :
+    cliente = clientes.objects.get(id= id)
+    form = formCliente (instance=cliente)
     if request.method == 'POST':
-        form = formPaciente(request.POST, instance=paciente)
+        form = formCliente(request.POST, instance=cliente)
         if form.is_valid():
             form.save()
         return index(request)
     data = {'form': form}
-    return render(request, 'APLICACION/agregarpaciente.html', data)
+    return render(request, 'APLICACION/agregarclient.html', data)
 
 
 
-    #MEDICOS
-def eliminarmedico(request, id):
-    medico = MEDICOS.objects.get(id= id)
-    medico.delete()
-    return redirect('/medicos')
 
-def actualizarmedico (request, id) :
-    medico = MEDICOS.objects.get(id= id)
-    form = formMedicos (instance=medico)
+    #FUNCIONARIOS
+def eliminarfuncionario(request, id):
+    funcionario = funcionarios.objects.get(id= id)
+    funcionario.delete()
+    return redirect('/func')
+
+def actualizarfuncionario (request, id) :
+    funcionario = funcionarios.objects.get(id= id)
+    form = formFunc (instance=funcionario)
     if request.method == 'POST':
-        form = formMedicos(request.POST, instance=medico)
+        form = formFunc(request.POST, instance=funcionario)
         if form.is_valid():
             form.save()
         return index(request)
     data = {'form': form}
-    return render(request, 'APLICACION/agregarmedico.html', data)
-
-
-
-
+    return render(request, 'APLICACION/agregarfun.html', data)
 
 
 
         
     #CITAS
 def eliminarcitas(request, id):
-    cita = CITAS.objects.get(id= id)
+    cita = cita.objects.get(id= id)
     cita.delete()
     return redirect('/citas')
 
 def actualizarcitas (request, id) :
-    cita = CITAS.objects.get(id= id)
-    form = formCitas (instance=cita)
+    cita = cita.objects.get(id= id)
+    form = formCita (instance=cita)
     if request.method == 'POST':
-        form = formCitas(request.POST, instance=cita)
+        form = formCita(request.POST, instance=cita)
         if form.is_valid():
             form.save()
         return index(request)
     data = {'form': form}
     return render(request, 'APLICACION/agregarcitas.html', data)
-
-'''

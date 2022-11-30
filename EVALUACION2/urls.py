@@ -37,10 +37,25 @@ urlpatterns = [
     path('addtipo/',views.agregartipomascota),
     path('addraza/',views.agregarraza),
 
+    path('editarcitas/<int:id>', views.actualizarcitas),
+    path('editarmedicos/<int:id>', views.actualizarfuncionario),
+    path('editarpacientes/<int:id>', views.actualzarcliente),
 
-     
+    
+    path('eliminarcitas/<int:id>', views.eliminarcitas),
+    path('eliminarfuncionario/<int:id>', views.eliminarfuncionario),
+    path('eliminarcliente/<int:id>', views.eliminarcliente),
+
+    
 
 
+    
+
+
+    
+
+
+    
 
 
 ]
