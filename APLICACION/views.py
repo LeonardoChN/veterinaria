@@ -131,15 +131,15 @@ def agregarraza(request):
 
 #CLIENTES
 def eliminarcliente(request, id):
-    cliente = clientes.objects.get(id= id)
-    cliente.delete()
+    clientex = clientes.objects.get(id= id)
+    clientex.delete()
     return redirect('/clientes')
 
 def actualzarcliente (request, id) :
-    cliente = clientes.objects.get(id= id)
-    form = formCliente (instance=cliente)
+    clientex = clientes.objects.get(id= id)
+    form = formCliente (instance=clientex)
     if request.method == 'POST':
-        form = formCliente(request.POST, instance=cliente)
+        form = formCliente(request.POST, instance=clientex)
         if form.is_valid():
             form.save()
         return index(request)
@@ -151,15 +151,15 @@ def actualzarcliente (request, id) :
 
     #FUNCIONARIOS
 def eliminarfuncionario(request, id):
-    funcionario = funcionarios.objects.get(id= id)
-    funcionario.delete()
+    funcionariox = funcionarios.objects.get(id= id)
+    funcionariox.delete()
     return redirect('/func')
 
 def actualizarfuncionario (request, id) :
-    funcionario = funcionarios.objects.get(id= id)
-    form = formFunc (instance=funcionario)
+    funcionariox = funcionarios.objects.get(id= id)
+    form = formFunc (instance=funcionariox)
     if request.method == 'POST':
-        form = formFunc(request.POST, instance=funcionario)
+        form = formFunc(request.POST, instance=funcionariox)
         if form.is_valid():
             form.save()
         return index(request)
@@ -171,15 +171,15 @@ def actualizarfuncionario (request, id) :
         
     #CITAS
 def eliminarcitas(request, id):
-    cita = cita.objects.get(id= id)
-    cita.delete()
+    citax = cita.objects.get(id= id)
+    citax.delete()
     return redirect('/citas')
 
 def actualizarcitas (request, id) :
-    cita = cita.objects.get(id= id)
-    form = formCita (instance=cita)
+    citax = cita.objects.get(id= id)
+    form = formCita (instance=citax)
     if request.method == 'POST':
-        form = formCita(request.POST, instance=cita)
+        form = formCita(request.POST, instance=citax)
         if form.is_valid():
             form.save()
         return index(request)
